@@ -1,3 +1,5 @@
+package Tree;
+
 /**
  * bst O(log(n))
  * worst
