@@ -3,6 +3,7 @@ package Recursion;
 /**
  * 숫자 배열이 있는데 1개를 제외하고는 2개쌍으로 되어 있고, 정렬이 되어 있다.
  * ex) 1 2 2 3 3 -> 1, 4 4 5 5 6 6 9 10 10 -> 9
+ * 1 1 3 4 4
  */
 public class 숫자배열중1개만존재하는숫자구하기 {
     public static void main(String[] args) {

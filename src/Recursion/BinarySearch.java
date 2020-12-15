@@ -6,10 +6,11 @@ package Recursion;
  */
 public class BinarySearch {
     public static void main(String[] args) {
-        int target = 41;
+        int target = 29;
         int[] arr = new int[]{1, 2, 5, 12, 24, 29, 31, 41};
 //        int[] arr = new int[]{41,2};
-        System.out.println(recursion(arr, 0, arr.length - 1, target));
+//        System.out.println(recursion(arr, 0, arr.length - 1, target));
+        System.out.println(roof(arr, target));
     }
 
     private static int recursion(int[] arr, int start, int end, int value) {
@@ -29,5 +30,26 @@ public class BinarySearch {
             return recursion(arr, start, mid - 1, value);
         }
         return -1;
+    }
+
+    private static int roof(int[] input, int value) {
+        int start = 0;
+        int end = input.length - 1;
+        int mid = 0;
+
+        if (input[end] < input[start])
+            return -1;
+
+        while (true) {
+            mid = start + (end - start) / 2;
+            if (input[mid] == value) {
+                return mid;
+            }
+            if(input[mid] < value){
+                start = mid + 1;
+            } else {
+                end = mid - 1;
+            }
+        }
     }
 }
