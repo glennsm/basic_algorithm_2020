@@ -1,5 +1,9 @@
 package Sort;
 
+/**
+ * 선택정렬 : o(n2)
+ * 불안정한 정렬이다 ex) 5(1),3,5(2),2 -> 2,3,5(2),5(1) 같은키인 5가 순서가 바뀔수잇다
+ */
 public class Select {
     public static void main(String[] args) {
         int[] n = new int[]{5,2,7,1,23,6,99,20};
