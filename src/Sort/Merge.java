@@ -1,23 +1,23 @@
 package Sort;
 
+import java.util.Arrays;
+
 import static Sort.Insert.insertSort;
 
 /**
  * best, worst, average 모두 o(nlog(n))
  * o(n)수준의 메모리가필요
  *
+ * quick sort와 차이점
+ * quick sort : 우선 피벗을 통해 정렬(partition) -> 영역을 나눔(quick sort)
+ * 합병정렬 : 영역을 쪼갤 수 있을 만큼 쪼갬(merge sort) -> 정렬(marge)
  */
 public class Merge {
     public static void main(String[] args) {
         int[] n = new int[]{5,2,7,1,23,6,99,20};
-        for( int i: n){
-            System.out.print(i+", ");
-        }
-        System.out.println("");
+        System.out.println(Arrays.toString(n));
         mergeSortSimple(n);
-        for( int i: n){
-            System.out.print(i+", ");
-        }
+        System.out.println(Arrays.toString(n));
     }
 
     private static void mergeSortSimple(int[] data) {

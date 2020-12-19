@@ -44,6 +44,10 @@ public class Quick {
     }
 
     private static int partition(int[] input, int left, int right) {
+        //worse는 이미정렬된 경우 o(n2)를 회피하기위해
+        int mid = (left - right) / 2;
+        swap(input, left, mid);
+
         int pivotValue = input[left];
         int i = left;
         int j = right;
