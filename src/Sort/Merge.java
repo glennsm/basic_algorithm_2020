@@ -28,6 +28,7 @@ public class Merge {
         //삽입정렬 사용
         if (data.length < 10){
             insertSort(data);
+            return;
         }
 
         //배열을 크기가 거의 같은 두개의 부분배열로 가른다.
