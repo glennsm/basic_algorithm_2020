@@ -14,22 +14,22 @@ import static Sort.Insert.insertSort;
  */
 public class Merge {
     public static void main(String[] args) {
-        int[] n = new int[]{5,2,7,1,23,6,99,20};
+        int[] n = new int[]{5,2,7,1,23,6,99,20,12};
         System.out.println(Arrays.toString(n));
         mergeSortSimple(n);
         System.out.println(Arrays.toString(n));
     }
 
     private static void mergeSortSimple(int[] data) {
-//        if (data.length < 2) {
-//            return;
-//        }
-        //어떤 정해진 크키보다 작은 부분배열을 다른 알고리즘으로 정렬하는 방식, 혼합형 합치기 정렬
-        //삽입정렬 사용
-        if (data.length < 10){
-            insertSort(data);
+        if (data.length < 2) {
             return;
         }
+        //어떤 정해진 크키보다 작은 부분배열을 다른 알고리즘으로 정렬하는 방식, 혼합형 합치기 정렬
+        //삽입정렬 사용
+//        if (data.length < 10){
+//            insertSort(data);
+//            return;
+//        }
 
         //배열을 크기가 거의 같은 두개의 부분배열로 가른다.
         int mid = data.length / 2;
