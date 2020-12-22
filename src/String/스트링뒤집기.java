@@ -1,11 +1,13 @@
 package String;
 
+import java.util.Arrays;
 import java.util.Stack;
 
 public class 스트링뒤집기 {
     public static void main(String[] args) {
         String input = "goods";
-        System.out.println(process(input));
+//        System.out.println(process(input));
+        System.out.println(reverseString(input.toCharArray()));
     }
 
     private static String process(String input) {
@@ -23,5 +25,16 @@ public class 스트링뒤집기 {
             sb.append(stack.pop());
         }
         return sb.toString();
+    }
+
+    public static String reverseString(char[] s) {
+        if(s == null) return null;
+        char ch;
+        for(int i=0; i<s.length/2; i++){
+            ch = s[i];
+            s[i] = s[s.length-1-i];
+            s[s.length-1-i] = ch;
+        }
+        return new String(s);
     }
 }
